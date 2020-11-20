@@ -14,25 +14,30 @@
       <span>Register for</span>
       <h1>Full Stack Conference</h1>
     </div>
+    <script src="https://kit.fontawesome.com/ca156b45cf.js" crossorigin="anonymous"></script>
   </header>
 	<div class="container">
-
+   
     <form action="index.html" method="post" novalidate>
       <p id="form-hint" class="form-hint"><span class="asterisk">*</span> - required field</p>
-
+      <span id="btn-hint" class="hint">Please complete required fields.</span> 
       <div class="basic-info-and-shirt-box">       
         <fieldset class="basic-info">         
           <legend>Basic Info</legend>
           
           <label for="name">Name: <span class="asterisk">*</span>
-            <input type="text" id="name" name="user-name" class="error-border">
-            <span id="name-hint" class="name-hint hint">Name field cannot be blank</span>
+            <input type="text" id="name" name="user-name" class="error-border" data-valid="empty">
+            <span id="name-hint" class="name-hint hint false1">Name cannot be blank</span>
+            <span id="name-hint" class="name-hint hint false2">Name cannot inlude numbers</span>
+            <span id="name-hint" class="name-hint hint false3">Name can only include [a-z] characters</span>
           </label>
           
           
           <label for="email">Email Address: <span class="asterisk">*</span>
-            <input type="email" id="email" name="user-email" class="error-border">
-            <span id="email-hint" class="email-hint hint">Email address must be formatted correctly</span>
+            <input type="email" id="email" name="user-email" class="error-border" data-valid="false">
+            <span id="name-hint" class="name-hint hint false1">Email cannot be blank</span>
+            <span id="name-hint" class="name-hint hint false2">Email must include an '@' symbol</span>
+            <span id="name-hint" class="name-hint hint false3">Email must include a domain name</span>
           </label>
           
           
@@ -88,10 +93,10 @@
           </div>
         </fieldset>
       </div>               
-
+      <span id="activity-hint" class="hint">At least one activity must be selected.</span> 
       <fieldset id="activities" class="activities">
         <legend>Register for Activities <span class="asterisk">*</span></legend>
-        <div id="activities-box" class="activities-box error-border">
+        <div id="activities-box" class="activities-box error-border" data-valid="false">
           <label>
             <input type="checkbox" name="all" data-cost="200">
             <span>Main Conference</span>
@@ -195,22 +200,28 @@
           <div class="credit-card-box">
             <div class="num-box">
               <label for="cc-num">Card Number: <span class="asterisk">*</span>
-                <input id="cc-num" name="user-cc-num" type="text" class="error-border">
-                <span id="cc-hint" class="cc-hint hint">Credit card number must be between 13 - 16 digits</span>
+                <input id="cc-num" name="user-cc-num" type="text" class="error-border" data-valid="false">
+                <span id="name-hint" class="name-hint hint false1">Card number cannot be blank</span>
+                <span id="name-hint" class="name-hint hint false2">Card number must only include numbers</span>
+                <span id="name-hint" class="name-hint hint false3">Card number must include 13-16 digits</span>
               </label>
             </div>
 
             <div class="zip-box">
               <label for="zip">Zip Code: <span class="asterisk">*</span>
-                <input id="zip" name="user-zip" type="text" class="error-border">
-                <span id="zip-hint" class="zip-hint hint">Zip Code must be 5 digits</span>
+                <input id="zip" name="user-zip" type="text" class="error-border" data-valid="false">
+                <span id="name-hint" class="name-hint hint false1">Zip code cannot be blank</span>
+                <span id="name-hint" class="name-hint hint false2">Zip code must only include numbers</span>
+                <span id="name-hint" class="name-hint hint false3">Zip code must only include 5 digits</span>
               </label>
             </div>
 
             <div class="cvv-box">
               <label for="cvv">CVV: <span class="asterisk">*</span>
-                <input id="cvv" name="user-cvv" type="text" class="error-border">
-                <span id="cvv-hint" class="cvv-hint hint">CVV must be 3 digits</span>
+                <input id="cvv" name="user-cvv" type="text" class="error-border" data-valid="false">
+                <span id="name-hint" class="name-hint hint false1">CVV cannot be blank</span>
+                <span id="name-hint" class="name-hint hint false2">CVV must include only numbers</span>
+                <span id="name-hint" class="name-hint hint false3">CVV must only include 3 digits</span>
               </label>
             </div>
           </div>           	         
@@ -227,7 +238,7 @@
         </div>                  
       </fieldset>        
         
-      <button type="submit">Register</button>      
+      <button type="submit">Register</button>     
     </form>
   </div>
   <script src="js/script.js"></script>
