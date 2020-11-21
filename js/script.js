@@ -34,6 +34,7 @@
  const paypalDiv = document.querySelector('#paypal');
  const bitcoinDiv = document.querySelector('#bitcoin');
  const creditcardDiv = document.querySelector('.credit-card-box');
+ const expDiv = document.querySelector('.expiration-box');
  const ccInput = document.querySelector('#cc-num');
  const zipInput = document.querySelector('#zip');
  const cvvInput = document.querySelector('#cvv');
@@ -266,12 +267,23 @@ paymentSelect.addEventListener('change', (e) => { // PAYMENT INFO
   paypalDiv.style.display = 'none';
   bitcoinDiv.style.display = 'none';
   creditcardDiv.style.display = 'none';
+  expDiv.style.display = 'none';
   if (e.target.value === 'paypal') { // hides non-selected payments
     paypalDiv.style.display = '';
+    ccInput.dataset.valid = 'true';
+    zipInput.dataset.valid = 'true';
+    cvvInput.dataset.valid = 'true';
   } else if (e.target.value === 'bitcoin') {
     bitcoinDiv.style.display = '';
+    ccInput.dataset.valid = 'true';
+    zipInput.dataset.valid = 'true';
+    cvvInput.dataset.valid = 'true';
   } else {
     creditcardDiv.style.display = '';
+    expDiv.style.display = '';
+    ccInput.dataset.valid = 'false';
+    zipInput.dataset.valid = 'false';
+    cvvInput.dataset.valid = 'false';
   }
 });
 
