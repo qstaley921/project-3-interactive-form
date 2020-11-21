@@ -125,49 +125,49 @@ function testName(input) {
 }
 
 function testEmail(input) {
-  if (/^$/.test(input.value) && !/^\w+@\w+\.\w+\s*$/.test(input.value)) {
+  if (!/^[\S]+$/.test(input.value)) {
     input.dataset.valid = 'false1';
-  } else if (/^\w+[^@]?$/.test(input.value) && !/^\w+@\w+\.\w+\s*$/.test(input.value)) {
+  } else if (/^[a-zA-Z0-9]+$/.test(input.value) && !/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/.test(input.value)) {
     input.dataset.valid = 'false2';
-  } else if (/^\w+@$/.test(input.value) && !/^\w+@\w+\.\w+\s*$/.test(input.value)) {
+  } else if (/^[a-zA-Z0-9]+@$/.test(input.value) && !/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/.test(input.value)) {
     input.dataset.valid = 'false3';
-  } else if (/^\w+@\w+\.\w+\s*$/.test(input.value)) {
+  } else if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/.test(input.value)) {
     input.dataset.valid = 'true';
-  } 
+  }
 }
 
 function testCC(input) {
-  if (/^$/.test(input.value) && !/^\d{13,16}$/.test(input.value)) {
+  if (!/^[\S]+$/.test(input.value)) {
     input.dataset.valid = 'false1';
-  } else if (/^\D+$/.test(input.value) && !/^\d{13,16}$/.test(input.value)) {
+  } else if (!/^[0-9]+$/.test(input.value) && !/^[0-9]{13,16}$/.test(input.value)) {
     input.dataset.valid = 'false2';
-  } else if (/^\d+$/.test(input.value) && !/^\d{13,16}$/.test(input.value)) {
+  } else if (/^[0-9]+$/.test(input.value) && !/^[0-9]{13,16}$/.test(input.value)) {
     input.dataset.valid = 'false3';
-  } else if (/^\d{13,16}$/.test(input.value)) {
+  } else if (/^[0-9]{13,16}$/.test(input.value)) {
     input.dataset.valid = 'true';
   } 
 }
 
 function testZip(input) {
-  if (/^$/.test(input.value) && !/^\d{5}$/.test(input.value)) {
+  if (!/^[\S]+$/.test(input.value)) {
     input.dataset.valid = 'false1';
-  } else if (/^\D+$/.test(input.value) && !/^\d{5}$/.test(input.value)) {
+  } else if (!/^[0-9]+$/.test(input.value) && !/^[0-9]{5}$/.test(input.value)) {
     input.dataset.valid = 'false2';
-  } else if (/^\d+$/.test(input.value) && !/^\d{5}$/.test(input.value)) {
+  } else if (/^[0-9]+$/.test(input.value) && !/^[0-9]{5}$/.test(input.value)) {
     input.dataset.valid = 'false3';
-  } else if (/^\d{5}$/.test(input.value)) {
+  } else if (/^[0-9]{5}$/.test(input.value)) {
     input.dataset.valid = 'true';
   } 
 }
 
 function testCVV(input) {
-  if (/^$/.test(input.value) && !/^\d{3}$/.test(input.value)) {
+  if (!/^[\S]+$/.test(input.value)) {
     input.dataset.valid = 'false1';
-  } else if (/^\D+$/.test(input.value) && !/^\d{3}$/.test(input.value)) {
+  } else if (!/^[0-9]+$/.test(input.value) && !/^[0-9]{3}$/.test(input.value)) {
     input.dataset.valid = 'false2';
-  } else if (/^\d+$/.test(input.value) && !/^\d{3}$/.test(input.value)) {
+  } else if (/^[0-9]+$/.test(input.value) && !/^[0-9]{3}$/.test(input.value)) {
     input.dataset.valid = 'false3';
-  } else if (/^\d{3}$/.test(input.value)) {
+  } else if (/^[0-9]{3}$/.test(input.value)) {
     input.dataset.valid = 'true';
   } 
 }

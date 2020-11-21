@@ -35,7 +35,7 @@
           
           <label for="email">Email Address: <span class="asterisk">*</span>
             <input type="email" id="email" name="user-email" class="error-border" data-valid="false">
-            <span id="name-hint" class="name-hint hint false1">Email cannot be blank</span>
+            <span id="name-hint" class="name-hint hint false1">Email cannot be blank or have spaces</span>
             <span id="name-hint" class="name-hint hint false2">Email must include an '@' symbol</span>
             <span id="name-hint" class="name-hint hint false3">Email must include a domain name</span>
           </label>
@@ -201,7 +201,7 @@
             <div class="num-box">
               <label for="cc-num">Card Number: <span class="asterisk">*</span>
                 <input id="cc-num" name="user-cc-num" type="text" class="error-border" data-valid="false">
-                <span id="name-hint" class="name-hint hint false1">Card number cannot be blank</span>
+                <span id="name-hint" class="name-hint hint false1">Card number cannot be blank or have spaces</span>
                 <span id="name-hint" class="name-hint hint false2">Card number must only include numbers</span>
                 <span id="name-hint" class="name-hint hint false3">Card number must include 13-16 digits</span>
               </label>
@@ -210,18 +210,18 @@
             <div class="zip-box">
               <label for="zip">Zip Code: <span class="asterisk">*</span>
                 <input id="zip" name="user-zip" type="text" class="error-border" data-valid="false">
-                <span id="name-hint" class="name-hint hint false1">Zip code cannot be blank</span>
+                <span id="name-hint" class="name-hint hint false1">Zip code cannot be blank or have spaces</span>
                 <span id="name-hint" class="name-hint hint false2">Zip code must only include numbers</span>
-                <span id="name-hint" class="name-hint hint false3">Zip code must only include 5 digits</span>
+                <span id="name-hint" class="name-hint hint false3">Zip code must include 5 digits</span>
               </label>
             </div>
 
             <div class="cvv-box">
               <label for="cvv">CVV: <span class="asterisk">*</span>
                 <input id="cvv" name="user-cvv" type="text" class="error-border" data-valid="false">
-                <span id="name-hint" class="name-hint hint false1">CVV cannot be blank</span>
+                <span id="name-hint" class="name-hint hint false1">CVV cannot be blank or have spaces</span>
                 <span id="name-hint" class="name-hint hint false2">CVV must include only numbers</span>
-                <span id="name-hint" class="name-hint hint false3">CVV must only include 3 digits</span>
+                <span id="name-hint" class="name-hint hint false3">CVV must only 3 digits</span>
               </label>
             </div>
           </div>           	         
