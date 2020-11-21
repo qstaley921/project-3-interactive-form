@@ -178,7 +178,7 @@ function showError(input) {
   const false1 = label.querySelector('.false1');
   const false2 = label.querySelector('.false2');
   const false3 = label.querySelector('.false3');
-  if (dataset === 'true') {
+  if (dataset === 'true') { // Show check sign 
     if (label.querySelector('i') !== null) {
       const icon = label.querySelector('i');
       icon.remove();
@@ -281,9 +281,13 @@ paymentSelect.addEventListener('change', (e) => { // PAYMENT INFO
   } else {
     creditcardDiv.style.display = '';
     expDiv.style.display = '';
-    ccInput.dataset.valid = 'false';
-    zipInput.dataset.valid = 'false';
-    cvvInput.dataset.valid = 'false';
+    const event = new Event('input');
+    ccInput.value = '';
+    ccInput.dispatchEvent(event); // runs a new 'input' event, in case the field was formerly validated 'true' 
+    zipInput.value = '';
+    zipInput.dispatchEvent(event);
+    cvvInput.value = '';
+    cvvInput.dispatchEvent(event);
   }
 });
 
