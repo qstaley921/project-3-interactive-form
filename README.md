@@ -1,7 +1,7 @@
 # Preface
 TITLE: Treehouse Interactive Form | Project 3 | JS by Quentin Staley
-PREFACE:
 
+PREFACE:
 *This readme will explain the structure of the JavaScript `script.js`*
 1. ... using numbered bullets for each `STEP`
 **AND**
@@ -58,6 +58,8 @@ PREFACE:
 5. `showError` merely reads the `dataset` from the `event.target` and makes that `HTML Element` either `css: hidden` or `css: inline` 
     - It also inserts a [fontawesome](fontawesome.com) icon as `adjacentHTML` within the `input.parentElement` 
 
+------
+
 ## STEP 3: Submit the form
 
 1. Check the `<datasets>` *I used HTML `data:` properties to add validation to each of the inputs. So ... if the `data: true` that input was valid and form would submit. Or, if `data: false1`, the `<p data: false1>This is the first error message</p>` would be visible and the form would not submit. Looked at each `input.dataset` in the `requiredInputs[]` array declared up top*
@@ -66,6 +68,8 @@ PREFACE:
 3. Artificially trigger a `new Event()` on each of the `requiredInputs[]` *this step forces the validation to recheck whatever `input.value` might have been pasted/typed and then later de-selected re-selected*
     - i.e. if you put invalid CreditCard numbers, then seleted PayPal, then reselected Credit Card, this `new Event()` would force any pre-existing Credit Card data to be re-evaluated, despite the 'pre-existing' data not triggering its own `input.event` 
 4. Submit Form! Yay! *I added a grimey little alert just in case users thought a `refresh` meant the form wasn't submitted but was instead erased. 
+
+------
 
 ### OVERALL COMMENTARY: 
 
